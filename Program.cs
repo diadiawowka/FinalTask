@@ -36,3 +36,17 @@ void PrintArray(string[] array)
 			Console.WriteLine();
 		}
 		}
+
+        void PrintTask(string[] array)
+		{
+			Console.WriteLine("база данных:");
+			PrintArray(array);
+			string[] shortArray = GetShortWordsArray(array);
+			Console.WriteLine($"Вывод (значения меньше или равны {MAX_WORD_LENGTH} символом)");
+			PrintArray(shortArray);
+			Console.WriteLine();
+		}
+	
+		PrintTask(arr1);
+		PrintTask(arr2);
+		PrintTask(arr3);
